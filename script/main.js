@@ -13,8 +13,3 @@ document.addEventListener("click", function (e) {
   }
 });
 
-window.onclick = (e) => {
-if (e.target === itemDetailModal) {
-  itemDetailModal.style.display = "none";
-}
-};
