@@ -86,109 +86,7 @@ body {
   display: none;
 }
 
-/* Responsive Styles */
-@media (max-width: 1366px) {
-  html {
-    font-size: 75%;
-  }
-}
-
-/* Tablet */
-@media (max-width: 758px) {
-    html {
-      font-size: 62.5%;
-    }
-
-    #hamburger-menu {
-      display: inline-block;
-    }
-
-    .navbar .navbar-nav {
-      position: absolute;
-      flex-direction: column;
-      gap: 0;
-      top: 100%;
-      right: -100%;
-      background-color: #001164;
-      width: 30rem;
-      height: 100vh;
-      transition: 0.3s;
-    }
-
-    .navbar .navbar-nav.active {
-      right: 0;
-    }
-
-    .navbar .navbar-nav a {
-      color: white;
-      display: block;
-      margin: 1.5rem;
-      padding: 0.5rem;
-      font-size: 2rem;
-    }
-
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
-  }
-
-  .navbar .navbar-nav a:hover::after {
-    transform: scaleX(0.2);
-  }
-
-
-  .about .row {
-    flex-wrap: wrap;
-  }
-
-  .about .row .about-img img {
-    height: 24rem;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .about .row .content {
-    padding: 0;
-  }
-
-  .about .row .content h3 {
-    margin-top: 1rem;
-    font-size: 2rem;
-  }
-
-  .about .row .content p {
-    font-size: 1.6rem;
-  }
-
-  .menu p {
-    font-size: 1.2rem;
-  }
-
-  .contact .row {
-    flex-wrap: wrap;
-  }
-
-  .contact .row .map {
-    height: 30rem;
-  }
-
-  .contact .row form {
-    padding-top: 0;
-  }
-
-  .modal-content {
-    flex-wrap: wrap;
-  }
-}
-
-/* Mobile Phone */
-@media (max-width: 450px) {
-  html {
-    font-size: 55%;
-  }
-}
-
 /* ---------------------------------- Bagian Main ------------------------------------- */
-
 
 .wrapper-menu-visualization {
   display: flex;
@@ -208,7 +106,6 @@ body {
   background-color: white;
   width: calc(33.33% - 20px);
   width: 200px;
-  /* Mengatur lebar kartu sesuai dengan tiga kartu per baris */
   border-radius: 8px;
   border: 1px solid #ccc;
   padding: 10px;
@@ -237,21 +134,140 @@ body {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 758px) {
 
   .wrapper-menu-visualization .menu-card-active,
   .wrapper-menu-visualization .menu-card {
     width: calc(50% - 20px);
-    /* Mengatur lebar kartu sesuai dengan dua kartu per baris */
   }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    flex-direction: column;
+    gap: 0;
+    top: 100%;
+    right: -100%;
+    background-color: #001164;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: white;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+.navbar .navbar-nav a::after {
+  transform-origin: 0 0;
 }
 
-@media (max-width: 480px) {
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.2);
+}
+
+
+.about .row {
+  flex-wrap: wrap;
+}
+
+.about .row .about-img img {
+  height: 24rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about .row .content {
+  padding: 0;
+}
+
+.about .row .content h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.about .row .content p {
+  font-size: 1.6rem;
+}
+
+.menu p {
+  font-size: 1.2rem;
+}
+
+.contact .row {
+  flex-wrap: wrap;
+}
+
+.contact .row .map {
+  height: 30rem;
+}
+
+.contact .row form {
+  padding-top: 0;
+}
+
+.modal-content {
+  flex-wrap: wrap;
+}
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
 
   .wrapper-menu-visualization .menu-card-active,
   .wrapper-menu-visualization .menu-card {
     width: calc(100% - 20px);
-    /* Mengatur lebar kartu agar satu kartu per baris */
+  }
+
+  .tab {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab button {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .tabcontent {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
   }
 }
 
@@ -291,6 +307,7 @@ body {
 
 .tabcontent {
   display: none;
+  width: 100%;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
@@ -304,7 +321,6 @@ body {
 .wrapper-visualization {
   display: flex;
   flex-wrap: wrap;
-  /* Agar item bisa wrap ke baris baru saat layar lebih kecil */
   gap: 10px;
   justify-content: center;
   padding: 10px;
@@ -314,9 +330,7 @@ body {
   background-color: white;
   padding: 10px;
   max-width: 590px;
-  /* Gunakan max-width agar kartu tidak melebihi lebar tertentu */
   width: 100%;
-  /* Lebar kartu akan mengikuti lebar parent-nya */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -339,30 +353,22 @@ body {
   max-height: 87%;
 }
 
-/* .card img {
-  max-width: 100%;
-} */
 
 .footer {
   padding: 20px;
-  /* Tambahkan sedikit padding agar konten tidak terlalu berdekatan dengan tepi */
   background-color: black;
   color: white;
   text-align: center;
-  /* Tengahkan teks */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 758px) {
   .footer {
     padding: 15px;
-    /* Kurangi padding saat layar menjadi lebih kecil */
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 450px) {
   .footer {
     padding: 10px;
-    /* Kurangi padding lebih lanjut untuk layar yang lebih kecil */
   }
 }
